@@ -1,0 +1,9 @@
+# cache
+__pycache__
+*.py[cod]
+
+# model weights
+*.pt
+
+# checkpoints
+.ipynb_checkpoints
