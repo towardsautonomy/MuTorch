@@ -66,11 +66,6 @@ class Sequential(Module):
             layer_labels[layer] = layer
             prev_layer = layer
 
-            if layer.activation is not None:
-                G.add_edge(layer, layer.activation)
-                layer_labels[layer.activation] = str(layer.activation)
-                prev_layer = layer.activation
-
         # add output node
         G.add_edge(prev_layer, 'out', shape='box')
 
