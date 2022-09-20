@@ -1,0 +1,5 @@
+var searchData=
+[
+  ['tanh_112',['Tanh',['../classmutorch_1_1core_1_1nn_1_1tanh_1_1Tanh.html',1,'mutorch::core::nn::tanh']]],
+  ['tensor_113',['Tensor',['../classmutorch_1_1core_1_1tensor_1_1Tensor.html',1,'mutorch::core::tensor']]]
+];

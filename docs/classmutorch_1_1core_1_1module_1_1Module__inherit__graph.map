@@ -1,0 +1,11 @@
+<map id="mutorch.core.module.Module" name="mutorch.core.module.Module">
+<area shape="rect" id="node1" title=" " alt="" coords="5,213,219,240"/>
+<area shape="rect" id="node2" href="$classmutorch_1_1core_1_1losses_1_1l1_1_1L1Loss.html" title=" " alt="" coords="275,5,492,32"/>
+<area shape="rect" id="node3" href="$classmutorch_1_1core_1_1losses_1_1l1_1_1SmoothL1Loss.html" title=" " alt="" coords="272,57,495,98"/>
+<area shape="rect" id="node4" href="$classmutorch_1_1core_1_1losses_1_1mse_1_1MSELoss.html" title=" " alt="" coords="289,122,478,163"/>
+<area shape="rect" id="node5" href="$classmutorch_1_1core_1_1nn_1_1linear_1_1Linear.html" title=" " alt="" coords="277,188,490,215"/>
+<area shape="rect" id="node6" href="$classmutorch_1_1core_1_1nn_1_1linear_1_1Neuron.html" title=" " alt="" coords="273,239,493,265"/>
+<area shape="rect" id="node7" href="$classmutorch_1_1core_1_1nn_1_1sequential_1_1Sequential.html" title=" " alt="" coords="281,290,485,331"/>
+<area shape="rect" id="node8" href="$classmutorch_1_1core_1_1optim_1_1adam_1_1Adam.html" title=" " alt="" coords="267,356,500,383"/>
+<area shape="rect" id="node9" href="$classmutorch_1_1core_1_1optim_1_1sgd_1_1SGD.html" title=" " alt="" coords="279,407,488,433"/>
+</map>

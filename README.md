@@ -9,13 +9,13 @@ Some of the nomenclature used in this framework is inspired by PyTorch and are d
  - **Tensor**: A tensor is a collection of *nodes* and can be multi-dimensional. It is used to represent the input and output of a neuron.  
  - **Layer**: A layer performs computations on a tensor and returns a tensor.  
 
-The framework is built in a modular way, and can be extended to include new layers, activation functions, and optimizers. Examples of how to use the framework to build *node-level*, *tensor-level*, or a full fledged *Sequential MLP* are provided in the [demo.ipynb](demo.ipynb) notebook. *Loss functions* and *optimizer implementations* are also provided to build an end-to-end understanding of neural network training process. The framework also provides a simple way to visualize the computational graph using [Graphviz](https://graphviz.org/).
+The framework is built in a modular way, and can be extended to include new layers, activation functions, and optimizers. Examples of how to use the framework to build *node-level*, *tensor-level*, or a full fledged *Sequential MLP* are provided in the [Demo Notebook]([demo.ipynb](https://github.com/towardsautonomy/mutorch/blob/main/demo.ipynb)) notebook. *Loss functions* and *optimizer implementations* are also provided to build an end-to-end understanding of neural network training process. The framework also provides a simple way to visualize the computational graph using [Graphviz](https://graphviz.org/).
 
 ## Building a Neural Network
 
 The framework can be used in a few ways:
 
-### 1. **Node-level**: The framework can be used to build a single node and then use it to build a computational graph. 
+### 1. Node-level: The framework can be used to build a single node and then use it to build a computational graph. 
 
  ```python
     from mutorch import Node
@@ -35,9 +35,9 @@ The framework can be used in a few ways:
     # perform a backward pass
     x.backward()
  ``` 
- ![](node_graph.png)
+ ![](media/node_graph.png)
 
-### 2. **Tensor-level**: An example of tensor-level operation is shown below:
+### 2. Tensor-level: An example of tensor-level operation is shown below:
 
  ```python
     import mutorch
@@ -57,7 +57,7 @@ The framework can be used in a few ways:
     z.backward()
  ```
 
-### 3. **Sequential MLP**: The framework can be used to build a complete neural network through sequential layers. An example is shown below:
+### 3. Sequential MLP: The framework can be used to build a complete neural network through sequential layers. An example is shown below:
 
  ```python
     from mutorch import nn
@@ -75,7 +75,7 @@ The framework can be used in a few ways:
     # perform a backward pass
     y.backward()
  ```
-![](sequential_graph.png)  
+![](media/sequential_graph.png)  
 
 ## Optimizers
 
@@ -152,3 +152,5 @@ Model output after training:  [0.012926827557352217, 0.008991985611204682, 0.002
 ```
 
 Model weights can further be saved and loaded using `model.save(filename)` and `model.load(filename)` respectively.
+
+**For a better understanding of the framework, please see the [Demo Notebook](https://github.com/towardsautonomy/mutorch/blob/main/demo.ipynb).**
