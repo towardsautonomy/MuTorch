@@ -91,7 +91,6 @@ The framework provides a simple way to build optimizers and use them during the 
 
 Loss functions can be easily built using the MuTorch framework. Few example losses implemented within the framework include MSE, L1, SmoothL1, etc.
 
-Example:
  ```python
     # example of defining an MSE loss
     from mutorch import losses
