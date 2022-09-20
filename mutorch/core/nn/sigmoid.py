@@ -3,13 +3,17 @@ import core
 from node import Node
 from tensor import Tensor
 
+import string
+import random
+
 class Sigmoid(Node):
-    def __init__(self, name='sigmoid', requires_grad=True):
+    def __init__(self, name='', requires_grad=True):
         """ Initialize a node.
         :param name: The name of the node.
         :param requires_grad: Whether the node requires gradient.
         """
-        self._name = name
+        self._name = name if name != '' else 'sigmoid+' + \
+                            ''.join(random.choices(string.ascii_lowercase + string.digits, k=4))
         self._requires_grad = requires_grad
 
     def __repr__(self):

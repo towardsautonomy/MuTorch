@@ -81,9 +81,22 @@ The framework can be used in a few ways:
 
 The framework provides a simple way to build optimizers and use them during the neural network training process. Few examples of optimizers provided within the framework include SGD, Adam, etc. 
 
+ ```python
+    # example of defining an Adam optimizer
+    from mutorch import optim
+    optimizer = optim.Adam(model.parameters(), lr=0.01)
+ ```
+
 ## Loss Functions
 
 Loss functions can be easily built using the MuTorch framework. Few example losses implemented within the framework include MSE, L1, SmoothL1, etc.
+
+Example:
+ ```python
+    # example of defining an MSE loss
+    from mutorch import losses
+    loss_fn = losses.MSELoss()
+ ```
 
 ## Training a Neural Network
 

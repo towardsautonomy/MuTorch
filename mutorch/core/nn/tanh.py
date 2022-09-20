@@ -3,22 +3,26 @@ import core
 from node import Node
 from tensor import Tensor
 
+import string
+import random
+
 class Tanh(Node):
-    def __init__(self, name='tanh', requires_grad=True):
+    def __init__(self, name='', requires_grad=True):
         """ Initialize a node.
         :param name: The name of the node.
         :param requires_grad: Whether the node requires gradient.
         """
         self._value = 0.
-        self._name = name
+        self._name = name if name != '' else 'tanh+' + \
+                            ''.join(random.choices(string.ascii_lowercase + string.digits, k=4))
         self._requires_grad = requires_grad
 
     def __repr__(self):
         """ Return a string representation of the node. """
         str_ = f'Tanh('
-        str_ += f'name={self.name}, ' if self.name != '' else ''
+        str_ += f'name={self._name}, ' if self._name != '' else ''
         str_ += f'value={self.value}'
-        str_ += f', grad={self.grad}' if self._requires_grad else ''
+        str_ += f', grad={self._grad}' if self._requires_grad else ''
         str_ += f')'
         return f'{str_}'
 
