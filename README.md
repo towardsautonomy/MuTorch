@@ -1,4 +1,5 @@
 # MuTorch: A lightweight Deep Learning framework with PyTorch-like API
+[**GitHub**](https://github.com/towardsautonomy/mutorch)
 
 MuTorch is a deep learning framework built for educational purposes and building a deep understanding of how neural networks work. This is not intended to be efficient, but rather very simplistic. The goal is to build a framework that is easy to understand, modify, and learn from. **It does not use any external libraries, and is built from scratch using only Python lists and operators**.
 
