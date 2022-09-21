@@ -4,6 +4,7 @@ var hierarchy =
       [ "mutorch.core.losses.l1.L1Loss", "classmutorch_1_1core_1_1losses_1_1l1_1_1L1Loss.html", null ],
       [ "mutorch.core.losses.l1.SmoothL1Loss", "classmutorch_1_1core_1_1losses_1_1l1_1_1SmoothL1Loss.html", null ],
       [ "mutorch.core.losses.mse.MSELoss", "classmutorch_1_1core_1_1losses_1_1mse_1_1MSELoss.html", null ],
+      [ "mutorch.core.losses.nll.NLLLoss", "classmutorch_1_1core_1_1losses_1_1nll_1_1NLLLoss.html", null ],
       [ "mutorch.core.nn.linear.Linear", "classmutorch_1_1core_1_1nn_1_1linear_1_1Linear.html", null ],
       [ "mutorch.core.nn.linear.Neuron", "classmutorch_1_1core_1_1nn_1_1linear_1_1Neuron.html", null ],
       [ "mutorch.core.nn.sequential.Sequential", "classmutorch_1_1core_1_1nn_1_1sequential_1_1Sequential.html", null ],
@@ -15,5 +16,6 @@ var hierarchy =
       [ "mutorch.core.nn.sigmoid.Sigmoid", "classmutorch_1_1core_1_1nn_1_1sigmoid_1_1Sigmoid.html", null ],
       [ "mutorch.core.nn.tanh.Tanh", "classmutorch_1_1core_1_1nn_1_1tanh_1_1Tanh.html", null ]
     ] ],
+    [ "mutorch.core.nn.softmax.Softmax", "classmutorch_1_1core_1_1nn_1_1softmax_1_1Softmax.html", null ],
     [ "mutorch.core.tensor.Tensor", "classmutorch_1_1core_1_1tensor_1_1Tensor.html", null ]
 ];

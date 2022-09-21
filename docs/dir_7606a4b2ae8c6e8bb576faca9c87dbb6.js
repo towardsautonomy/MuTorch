@@ -7,5 +7,8 @@ var dir_7606a4b2ae8c6e8bb576faca9c87dbb6 =
     ] ],
     [ "mse.py", "mse_8py.html", [
       [ "MSELoss", "classmutorch_1_1core_1_1losses_1_1mse_1_1MSELoss.html", "classmutorch_1_1core_1_1losses_1_1mse_1_1MSELoss" ]
+    ] ],
+    [ "nll.py", "nll_8py.html", [
+      [ "NLLLoss", "classmutorch_1_1core_1_1losses_1_1nll_1_1NLLLoss.html", "classmutorch_1_1core_1_1losses_1_1nll_1_1NLLLoss" ]
     ] ]
 ];

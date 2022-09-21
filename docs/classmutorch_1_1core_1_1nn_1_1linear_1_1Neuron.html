@@ -111,8 +111,8 @@ Collaboration diagram for mutorch.core.nn.linear.Neuron:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aa89b90e0ec7e9fc026608565188fdabe"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmutorch_1_1core_1_1nn_1_1linear_1_1Neuron.html#aa89b90e0ec7e9fc026608565188fdabe">__init__</a> (self, input_size, weight_initializer=lambda:random.uniform(-1, 1), bias_initializer=lambda:random.uniform(-1, 1), <a class="el" href="classmutorch_1_1core_1_1nn_1_1linear_1_1Neuron.html#aa9c74d039b35913d249d33ce9904607b">activation</a>=<a class="el" href="classmutorch_1_1core_1_1nn_1_1relu_1_1ReLU.html">ReLU</a>())</td></tr>
-<tr class="separator:aa89b90e0ec7e9fc026608565188fdabe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adcb3de65774f1acc2d347340ac368716"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmutorch_1_1core_1_1nn_1_1linear_1_1Neuron.html#adcb3de65774f1acc2d347340ac368716">__init__</a> (self, input_size, weight_initializer=lambda:random.uniform(-1, 1), bias_initializer=lambda:random.uniform(-1, 1))</td></tr>
+<tr class="separator:adcb3de65774f1acc2d347340ac368716"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad5cda378c3172e9e92ab00f48cfb5dae"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmutorch_1_1core_1_1nn_1_1linear_1_1Neuron.html#ad5cda378c3172e9e92ab00f48cfb5dae">forward</a> (self, inputs)</td></tr>
 <tr class="separator:ad5cda378c3172e9e92ab00f48cfb5dae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abc33737b056dd42d2f84159b3c5fa8ea"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmutorch_1_1core_1_1nn_1_1linear_1_1Neuron.html#abc33737b056dd42d2f84159b3c5fa8ea">__repr__</a> (self)</td></tr>
@@ -137,15 +137,13 @@ Public Attributes</h2></td></tr>
 <tr class="separator:afcf26a9cba5ee0887191076dafe0597e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4de3cb25974f3c7ec2564fab98aac2a4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmutorch_1_1core_1_1nn_1_1linear_1_1Neuron.html#a4de3cb25974f3c7ec2564fab98aac2a4">bias</a></td></tr>
 <tr class="separator:a4de3cb25974f3c7ec2564fab98aac2a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa9c74d039b35913d249d33ce9904607b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmutorch_1_1core_1_1nn_1_1linear_1_1Neuron.html#aa9c74d039b35913d249d33ce9904607b">activation</a></td></tr>
-<tr class="separator:aa9c74d039b35913d249d33ce9904607b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
 <p class="definition">Definition at line <a class="el" href="linear_8py_source.html#l00007">7</a> of file <a class="el" href="linear_8py_source.html">linear.py</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="aa89b90e0ec7e9fc026608565188fdabe"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa89b90e0ec7e9fc026608565188fdabe">&#9670;&nbsp;</a></span>__init__()</h2>
+<a id="adcb3de65774f1acc2d347340ac368716"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adcb3de65774f1acc2d347340ac368716">&#9670;&nbsp;</a></span>__init__()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -172,13 +170,7 @@ Public Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>bias_initializer</em> = <code>lambda:&#160;random.uniform(-1,&#160;1)</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>activation</em> = <code><a class="el" href="classmutorch_1_1core_1_1nn_1_1relu_1_1ReLU.html">ReLU</a>()</code>&#160;</td>
+          <td class="paramname"><em>bias_initializer</em> = <code>lambda:&#160;random.uniform(-1,&#160;1)</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -191,7 +183,6 @@ Public Attributes</h2></td></tr>
 :param input_size: the number of inputs
 :param weight_initializer: a function that returns a random weight
 :param bias_initializer: a function that returns a random bias
-:param activation: the activation function
 </pre> 
 <p class="definition">Definition at line <a class="el" href="linear_8py_source.html#l00008">8</a> of file <a class="el" href="linear_8py_source.html">linear.py</a>.</p>
 
@@ -214,7 +205,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="linear_8py_source.html#l00036">36</a> of file <a class="el" href="linear_8py_source.html">linear.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="linear_8py_source.html#l00033">33</a> of file <a class="el" href="linear_8py_source.html">linear.py</a>.</p>
 
 </div>
 </div>
@@ -247,27 +238,11 @@ Public Attributes</h2></td></tr>
 :param inputs: the inputs to the neuron
 :return: the output of the neuron
 </pre> 
-<p class="definition">Definition at line <a class="el" href="linear_8py_source.html#l00025">25</a> of file <a class="el" href="linear_8py_source.html">linear.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="linear_8py_source.html#l00023">23</a> of file <a class="el" href="linear_8py_source.html">linear.py</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a id="aa9c74d039b35913d249d33ce9904607b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa9c74d039b35913d249d33ce9904607b">&#9670;&nbsp;</a></span>activation</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">mutorch.core.nn.linear.Neuron.activation</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="linear_8py_source.html#l00018">18</a> of file <a class="el" href="linear_8py_source.html">linear.py</a>.</p>
-
-</div>
-</div>
 <a id="a4de3cb25974f3c7ec2564fab98aac2a4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4de3cb25974f3c7ec2564fab98aac2a4">&#9670;&nbsp;</a></span>bias</h2>
 
@@ -280,7 +255,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="linear_8py_source.html#l00017">17</a> of file <a class="el" href="linear_8py_source.html">linear.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="linear_8py_source.html#l00016">16</a> of file <a class="el" href="linear_8py_source.html">linear.py</a>.</p>
 
 </div>
 </div>
@@ -296,7 +271,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="linear_8py_source.html#l00016">16</a> of file <a class="el" href="linear_8py_source.html">linear.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="linear_8py_source.html#l00015">15</a> of file <a class="el" href="linear_8py_source.html">linear.py</a>.</p>
 
 </div>
 </div>

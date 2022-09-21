@@ -87,6 +87,7 @@ $(document).ready(function(){initNavTree('functions_func.html',''); initResizabl
 <h3><a id="index__5F"></a>- _ -</h3><ul>
 <li>__abs__()
 : <a class="el" href="classmutorch_1_1core_1_1node_1_1Node.html#a37392c963190d3fb9663d49ec92bf8c2">mutorch.core.node.Node</a>
+, <a class="el" href="classmutorch_1_1core_1_1tensor_1_1Tensor.html#aa6cee2d9b48ef785adbd562d4749bb76">mutorch.core.tensor.Tensor</a>
 </li>
 <li>__add__()
 : <a class="el" href="classmutorch_1_1core_1_1node_1_1Node.html#a16bb186ec2509fe47e928f70e553b17b">mutorch.core.node.Node</a>
@@ -96,18 +97,21 @@ $(document).ready(function(){initNavTree('functions_func.html',''); initResizabl
 : <a class="el" href="classmutorch_1_1core_1_1module_1_1Module.html#a310e14f2d0442f22c4aa4ac24587b83a">mutorch.core.module.Module</a>
 , <a class="el" href="classmutorch_1_1core_1_1nn_1_1relu_1_1ReLU.html#abf20342029b2db8f24000f147a36e9ec">mutorch.core.nn.relu.ReLU</a>
 , <a class="el" href="classmutorch_1_1core_1_1nn_1_1sigmoid_1_1Sigmoid.html#ac9b930e63405a10b0d772f21f62410ba">mutorch.core.nn.sigmoid.Sigmoid</a>
+, <a class="el" href="classmutorch_1_1core_1_1nn_1_1softmax_1_1Softmax.html#a04bda64c0f56d202634741a67880f906">mutorch.core.nn.softmax.Softmax</a>
 , <a class="el" href="classmutorch_1_1core_1_1nn_1_1tanh_1_1Tanh.html#ab70e00cae965cedfd34ce105275175b4">mutorch.core.nn.tanh.Tanh</a>
 </li>
 <li>__init__()
 : <a class="el" href="classmutorch_1_1core_1_1losses_1_1l1_1_1L1Loss.html#afb3eb84f53ec706c5d90e8ecb54c7554">mutorch.core.losses.l1.L1Loss</a>
 , <a class="el" href="classmutorch_1_1core_1_1losses_1_1l1_1_1SmoothL1Loss.html#ad6724a275b72fa00e3d54b2577355e33">mutorch.core.losses.l1.SmoothL1Loss</a>
 , <a class="el" href="classmutorch_1_1core_1_1losses_1_1mse_1_1MSELoss.html#a867dbd991c200422e137d93eeef03a5f">mutorch.core.losses.mse.MSELoss</a>
+, <a class="el" href="classmutorch_1_1core_1_1losses_1_1nll_1_1NLLLoss.html#a0e4a4af6a4bcd3df21a5c15733f13bca">mutorch.core.losses.nll.NLLLoss</a>
 , <a class="el" href="classmutorch_1_1core_1_1module_1_1Module.html#afd608154755c48f66b9e2162bbfb1942">mutorch.core.module.Module</a>
 , <a class="el" href="classmutorch_1_1core_1_1nn_1_1linear_1_1Linear.html#a8b3fb9f6d205931d19ea9d2dc695d8dc">mutorch.core.nn.linear.Linear</a>
-, <a class="el" href="classmutorch_1_1core_1_1nn_1_1linear_1_1Neuron.html#aa89b90e0ec7e9fc026608565188fdabe">mutorch.core.nn.linear.Neuron</a>
+, <a class="el" href="classmutorch_1_1core_1_1nn_1_1linear_1_1Neuron.html#adcb3de65774f1acc2d347340ac368716">mutorch.core.nn.linear.Neuron</a>
 , <a class="el" href="classmutorch_1_1core_1_1nn_1_1relu_1_1ReLU.html#a8a7407c7362f5b23d939825e3840c786">mutorch.core.nn.relu.ReLU</a>
 , <a class="el" href="classmutorch_1_1core_1_1nn_1_1sequential_1_1Sequential.html#a5d6f9354eec0bc2c104c6a6512f063f3">mutorch.core.nn.sequential.Sequential</a>
 , <a class="el" href="classmutorch_1_1core_1_1nn_1_1sigmoid_1_1Sigmoid.html#aa51dee3b50fc6cc50c2ec601f29f9879">mutorch.core.nn.sigmoid.Sigmoid</a>
+, <a class="el" href="classmutorch_1_1core_1_1nn_1_1softmax_1_1Softmax.html#ad425847c60d34b159e94a3e04ba693e6">mutorch.core.nn.softmax.Softmax</a>
 , <a class="el" href="classmutorch_1_1core_1_1nn_1_1tanh_1_1Tanh.html#a878a7e639501253a5f1ffecacdb41486">mutorch.core.nn.tanh.Tanh</a>
 , <a class="el" href="classmutorch_1_1core_1_1node_1_1Node.html#aab3043621d328e56b0f04af10d3a3c3b">mutorch.core.node.Node</a>
 , <a class="el" href="classmutorch_1_1core_1_1optim_1_1adam_1_1Adam.html#a86c24d80f8a58d3c24a647be7bdb5033">mutorch.core.optim.adam.Adam</a>
@@ -134,11 +138,13 @@ $(document).ready(function(){initNavTree('functions_func.html',''); initResizabl
 : <a class="el" href="classmutorch_1_1core_1_1losses_1_1l1_1_1L1Loss.html#ad75f490a1f5ca4148f3b1e730525320f">mutorch.core.losses.l1.L1Loss</a>
 , <a class="el" href="classmutorch_1_1core_1_1losses_1_1l1_1_1SmoothL1Loss.html#ab4595deb20d37d7d70838b77a26f1eb4">mutorch.core.losses.l1.SmoothL1Loss</a>
 , <a class="el" href="classmutorch_1_1core_1_1losses_1_1mse_1_1MSELoss.html#aad603e7329b8cf43e374009c69316a30">mutorch.core.losses.mse.MSELoss</a>
+, <a class="el" href="classmutorch_1_1core_1_1losses_1_1nll_1_1NLLLoss.html#afc72d8d2680b0a594ef06c06c083d10c">mutorch.core.losses.nll.NLLLoss</a>
 , <a class="el" href="classmutorch_1_1core_1_1nn_1_1linear_1_1Linear.html#a4c0d370d7568993f7643381555e1f44b">mutorch.core.nn.linear.Linear</a>
 , <a class="el" href="classmutorch_1_1core_1_1nn_1_1linear_1_1Neuron.html#abc33737b056dd42d2f84159b3c5fa8ea">mutorch.core.nn.linear.Neuron</a>
 , <a class="el" href="classmutorch_1_1core_1_1nn_1_1relu_1_1ReLU.html#a345a6ab7d0716943673aef4331c4a13b">mutorch.core.nn.relu.ReLU</a>
 , <a class="el" href="classmutorch_1_1core_1_1nn_1_1sequential_1_1Sequential.html#a75944b2f5acdfdf5002ae40b0cb7a17f">mutorch.core.nn.sequential.Sequential</a>
 , <a class="el" href="classmutorch_1_1core_1_1nn_1_1sigmoid_1_1Sigmoid.html#a2ae0a74dac60c82f4477a9b41d0ecabd">mutorch.core.nn.sigmoid.Sigmoid</a>
+, <a class="el" href="classmutorch_1_1core_1_1nn_1_1softmax_1_1Softmax.html#a98e4062062c9b5ed772f4987cdba2751">mutorch.core.nn.softmax.Softmax</a>
 , <a class="el" href="classmutorch_1_1core_1_1nn_1_1tanh_1_1Tanh.html#a5afe35f67ef70a42481a726820556f56">mutorch.core.nn.tanh.Tanh</a>
 , <a class="el" href="classmutorch_1_1core_1_1node_1_1Node.html#a797d061c9a42163d53eb7e5c263625c4">mutorch.core.node.Node</a>
 , <a class="el" href="classmutorch_1_1core_1_1optim_1_1adam_1_1Adam.html#abc3346e95426dda4d18208f4929087da">mutorch.core.optim.adam.Adam</a>
@@ -181,9 +187,19 @@ $(document).ready(function(){initNavTree('functions_func.html',''); initResizabl
 </ul>
 
 
+<h3><a id="index_c"></a>- c -</h3><ul>
+<li>clip()
+: <a class="el" href="classmutorch_1_1core_1_1node_1_1Node.html#a87b1d9f60d1c1a4c9410ea4f3fef9d29">mutorch.core.node.Node</a>
+</li>
+</ul>
+
+
 <h3><a id="index_d"></a>- d -</h3><ul>
 <li>data()
 : <a class="el" href="classmutorch_1_1core_1_1tensor_1_1Tensor.html#a6a81de17d3640489b1e6407e27a7d83d">mutorch.core.tensor.Tensor</a>
+</li>
+<li>detach()
+: <a class="el" href="classmutorch_1_1core_1_1tensor_1_1Tensor.html#a5387cb2eaafdb55aae7f5d78b0fff34f">mutorch.core.tensor.Tensor</a>
 </li>
 <li>draw_graph()
 : <a class="el" href="classmutorch_1_1core_1_1nn_1_1sequential_1_1Sequential.html#a2a308bba79b8dd7e7acb7d08a0ab504e">mutorch.core.nn.sequential.Sequential</a>
@@ -208,6 +224,7 @@ $(document).ready(function(){initNavTree('functions_func.html',''); initResizabl
 : <a class="el" href="classmutorch_1_1core_1_1losses_1_1l1_1_1L1Loss.html#a111fa864d7b86e66f44de3d1b4c73d69">mutorch.core.losses.l1.L1Loss</a>
 , <a class="el" href="classmutorch_1_1core_1_1losses_1_1l1_1_1SmoothL1Loss.html#a21897e276f3f5153c198f1c876b5a826">mutorch.core.losses.l1.SmoothL1Loss</a>
 , <a class="el" href="classmutorch_1_1core_1_1losses_1_1mse_1_1MSELoss.html#ac43fffcec14d83f1cf7d1976a0a89c1c">mutorch.core.losses.mse.MSELoss</a>
+, <a class="el" href="classmutorch_1_1core_1_1losses_1_1nll_1_1NLLLoss.html#af449f18238f8f76020feef1481fb7c6b">mutorch.core.losses.nll.NLLLoss</a>
 , <a class="el" href="classmutorch_1_1core_1_1module_1_1Module.html#a4beacbbc7dfdd516deea8927aba2933c">mutorch.core.module.Module</a>
 , <a class="el" href="classmutorch_1_1core_1_1nn_1_1linear_1_1Linear.html#a9311aca315e29b90b17ec2d4d5eaae18">mutorch.core.nn.linear.Linear</a>
 , <a class="el" href="classmutorch_1_1core_1_1nn_1_1linear_1_1Neuron.html#ad5cda378c3172e9e92ab00f48cfb5dae">mutorch.core.nn.linear.Neuron</a>
@@ -237,10 +254,17 @@ $(document).ready(function(){initNavTree('functions_func.html',''); initResizabl
 <li>load()
 : <a class="el" href="classmutorch_1_1core_1_1nn_1_1sequential_1_1Sequential.html#a37184064c87f12fba1ae87c140b4e522">mutorch.core.nn.sequential.Sequential</a>
 </li>
+<li>log()
+: <a class="el" href="classmutorch_1_1core_1_1node_1_1Node.html#a9366d8d82b1eb8c4b827d2c03f4755b7">mutorch.core.node.Node</a>
+, <a class="el" href="classmutorch_1_1core_1_1tensor_1_1Tensor.html#a7514b41f026d240b90fa205393857231">mutorch.core.tensor.Tensor</a>
+</li>
 </ul>
 
 
 <h3><a id="index_m"></a>- m -</h3><ul>
+<li>max()
+: <a class="el" href="classmutorch_1_1core_1_1tensor_1_1Tensor.html#a6077fa23ce36d32392873053fb970d28">mutorch.core.tensor.Tensor</a>
+</li>
 <li>mean()
 : <a class="el" href="classmutorch_1_1core_1_1tensor_1_1Tensor.html#ab96e461dde8f6764d7ed00bc5363b7ed">mutorch.core.tensor.Tensor</a>
 </li>
@@ -294,6 +318,7 @@ $(document).ready(function(){initNavTree('functions_func.html',''); initResizabl
 <h3><a id="index_t"></a>- t -</h3><ul>
 <li>tanh()
 : <a class="el" href="classmutorch_1_1core_1_1node_1_1Node.html#a1b63a3d6af317424bbcc2398dc92fbc3">mutorch.core.node.Node</a>
+, <a class="el" href="classmutorch_1_1core_1_1tensor_1_1Tensor.html#a5f1f32ced7846cc1eb64b9ef0815723e">mutorch.core.tensor.Tensor</a>
 </li>
 </ul>
 

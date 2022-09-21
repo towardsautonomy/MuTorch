@@ -34,7 +34,7 @@ class Tanh(Node):
         x = x if isinstance(x, (Node, core.node.Node, Tensor, core.tensor.Tensor)) \
               else Node(x) if isinstance(x, (int, float)) else Tensor(x)
 
-        if isinstance(x, (Tensor, core.tensor.Tensor)):
+        if 'Tensor' in str(type(x)):
             if len(x.shape) == 2:
                 out = Tensor([[x._data[i][j].tanh()  \
                                 for j in range(x.shape[1])] \

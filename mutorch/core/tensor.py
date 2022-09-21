@@ -111,7 +111,7 @@ class Tensor:
 
     def __add__(self, other):
         """ Add a tensor to another tensor or a scalar. """
-        other = other if isinstance(other, (Tensor, core.tensor.Tensor)) else Tensor(other)
+        other = other if 'Tensor' in str(type(other)) else Tensor(other)
         assert self.shape == other.shape or \
                other.shape == (1,self.shape[0]) or \
                other.shape == (1,1), \
@@ -140,7 +140,7 @@ class Tensor:
 
     def __sub__(self, other):
         """ Subtract a tensor from another tensor or a scalar. """
-        other = other if isinstance(other, (Tensor, core.tensor.Tensor)) else Tensor(other)
+        other = other if 'Tensor' in str(type(other)) else Tensor(other)
         assert self.shape == other.shape or \
                other.shape == (1,self.shape[0]) or \
                other.shape == (1,1), \
@@ -167,7 +167,7 @@ class Tensor:
 
     def __mul__(self, other):
         """ Multiply a tensor with another tensor or a scalar. """
-        other = other if isinstance(other, (Tensor, core.tensor.Tensor)) else Tensor(other)
+        other = other if 'Tensor' in str(type(other)) else Tensor(other)
         assert self.shape == other.shape or \
                other.shape == (1,self.shape[0]) or \
                other.shape == (1,1), \
@@ -196,7 +196,7 @@ class Tensor:
 
     def __pow__(self, other):
         """ Raise a tensor to the power of another tensor or a scalar. """
-        other = other if isinstance(other, (Tensor, core.tensor.Tensor)) else Tensor(other)
+        other = other if 'Tensor' in str(type(other)) else Tensor(other)
         assert other.shape == (1,self.shape[0]) or \
                other.shape == (1,1), \
                 f'The shapes of the tensors must be (1, {other.shape[0]}) or (1,1).'
@@ -216,7 +216,7 @@ class Tensor:
 
     def __truediv__(self, other):
         """ Divide a tensor by another tensor or a scalar. """
-        other = other if isinstance(other, (Tensor, core.tensor.Tensor)) else Tensor(other)
+        other = other if 'Tensor' in str(type(other)) else Tensor(other)
         assert self.shape == other.shape or \
                 other.shape == (1,self.shape[0]) or \
                other.shape == (1,1), \
@@ -249,9 +249,33 @@ class Tensor:
                         requires_grad=self.requires_grad)
         return out
 
+    def __abs__(self):
+        """ Return the absolute value of a tensor. """
+        out = Tensor([[abs(self._data[i][j]) \
+                        for j in range(self.shape[1])] \
+                        for i in range(self.shape[0])], \
+                        requires_grad=self.requires_grad)
+        return out
+
+    def tanh(self):
+        """ Return the hyperbolic tangent of a tensor. """
+        out = Tensor([[self._data[i][j].tanh() \
+                        for j in range(self.shape[1])] \
+                        for i in range(self.shape[0])], \
+                        requires_grad=self.requires_grad)
+        return out
+
     def exp(self, e):
         """ Calculate the exponential of a tensor. """
         out = Tensor([[self._data[i][j] ** e \
+                        for j in range(self.shape[1])] \
+                        for i in range(self.shape[0])], \
+                        requires_grad=self.requires_grad)
+        return out
+
+    def log(self):
+        """ Calculate the natural logarithm of a tensor. """
+        out = Tensor([[self._data[i][j].log() \
                         for j in range(self.shape[1])] \
                         for i in range(self.shape[0])], \
                         requires_grad=self.requires_grad)
@@ -268,6 +292,10 @@ class Tensor:
     def mean(self):
         """ Compute the mean of the elements of the tensor. """
         return self.sum() / (self.shape[0] * self.shape[1])
+
+    def max(self):
+        """ Return the maximum value of the tensor. """
+        return max(self.items())
 
     def item(self):
         """ Return the value of the tensor as a python number. """
@@ -299,7 +327,34 @@ class Tensor:
         else:
             raise ValueError(f'The shape of the tensor is not supported. self.shape = {self.shape}')
 
+    def detach(self):
+        """ Detach the tensor from the computational graph. """
+        if len(self.shape) == 2:
+            return [[node.value for node in row] \
+                    for row in self._data]
+        elif len(self.shape) == 3:
+            return [[[node.value for node in row] \
+                    for row in self._data[i]] \
+                    for i in range(self.shape[0])]
+        elif len(self.shape) == 4:
+            return [[[[node.value for node in row] \
+                    for row in self._data[i][j]] \
+                    for j in range(self.shape[1])] \
+                    for i in range(self.shape[0])]
+        else:
+            raise ValueError(f'The shape of the tensor is not supported. self.shape = {self.shape}')
+
     def backward(self):
         """ Backpropagate the gradient through the computational graph. """
         if self.requires_grad:
-            self._backward()
+            if len(self.shape) == 2:
+                [node.backward() for row in self._data for node in row]
+            elif len(self.shape) == 3:
+                [node.backward() for i in range(self.shape[0]) \
+                    for row in self._data[i] \
+                    for node in row]
+            elif len(self.shape) == 4:
+                [node.backward() for i in range(self.shape[0]) \
+                    for j in range(self.shape[1]) \
+                    for row in self._data[i][j] \
+                    for node in row]

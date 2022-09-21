@@ -135,6 +135,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a1b63a3d6af317424bbcc2398dc92fbc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac3bdda0608af2c547fff457e3108888d"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmutorch_1_1core_1_1node_1_1Node.html#ac3bdda0608af2c547fff457e3108888d">exp</a> (self)</td></tr>
 <tr class="separator:ac3bdda0608af2c547fff457e3108888d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9366d8d82b1eb8c4b827d2c03f4755b7"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmutorch_1_1core_1_1node_1_1Node.html#a9366d8d82b1eb8c4b827d2c03f4755b7">log</a> (self)</td></tr>
+<tr class="separator:a9366d8d82b1eb8c4b827d2c03f4755b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a87b1d9f60d1c1a4c9410ea4f3fef9d29"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmutorch_1_1core_1_1node_1_1Node.html#a87b1d9f60d1c1a4c9410ea4f3fef9d29">clip</a> (self, min_value=None, max_value=None)</td></tr>
+<tr class="separator:a87b1d9f60d1c1a4c9410ea4f3fef9d29"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2962428a93aa9392315314ee6bc656b3"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmutorch_1_1core_1_1node_1_1Node.html#a2962428a93aa9392315314ee6bc656b3">backward</a> (self)</td></tr>
 <tr class="separator:a2962428a93aa9392315314ee6bc656b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a05e6524764216722e7ee8f4ea4d1ab0d"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmutorch_1_1core_1_1node_1_1Node.html#a05e6524764216722e7ee8f4ea4d1ab0d">zero_grad</a> (self)</td></tr>
@@ -630,7 +634,47 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <pre class="fragment">Backpropagate the gradient. 
 </pre> 
-<p class="definition">Definition at line <a class="el" href="node_8py_source.html#l00200">200</a> of file <a class="el" href="node_8py_source.html">node.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="node_8py_source.html#l00231">231</a> of file <a class="el" href="node_8py_source.html">node.py</a>.</p>
+
+</div>
+</div>
+<a id="a87b1d9f60d1c1a4c9410ea4f3fef9d29"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a87b1d9f60d1c1a4c9410ea4f3fef9d29">&#9670;&nbsp;</a></span>clip()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def mutorch.core.node.Node.clip </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>min_value</em> = <code>None</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>max_value</em> = <code>None</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<pre class="fragment">Clip the value of a node. 
+:param min_value: the minimum value
+:param max_value: the maximum value
+:return: the clipped node
+</pre> 
+<p class="definition">Definition at line <a class="el" href="node_8py_source.html#l00201">201</a> of file <a class="el" href="node_8py_source.html">node.py</a>.</p>
 
 </div>
 </div>
@@ -669,7 +713,7 @@ Public Member Functions</h2></td></tr>
 :param show_grad: whether to show the gradient
 :param filename: the filename of the graph
 </pre> 
-<p class="definition">Definition at line <a class="el" href="node_8py_source.html#l00247">247</a> of file <a class="el" href="node_8py_source.html">node.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="node_8py_source.html#l00278">278</a> of file <a class="el" href="node_8py_source.html">node.py</a>.</p>
 
 </div>
 </div>
@@ -711,7 +755,29 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <pre class="fragment">Return the gradient of the node. </pre> 
-<p class="definition">Definition at line <a class="el" href="node_8py_source.html#l00239">239</a> of file <a class="el" href="node_8py_source.html">node.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="node_8py_source.html#l00270">270</a> of file <a class="el" href="node_8py_source.html">node.py</a>.</p>
+
+</div>
+</div>
+<a id="a9366d8d82b1eb8c4b827d2c03f4755b7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9366d8d82b1eb8c4b827d2c03f4755b7">&#9670;&nbsp;</a></span>log()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def mutorch.core.node.Node.log </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<pre class="fragment">Compute the natural logarithm of a node. 
+:return: the natural logarithm of the node
+</pre> 
+<p class="definition">Definition at line <a class="el" href="node_8py_source.html#l00186">186</a> of file <a class="el" href="node_8py_source.html">node.py</a>.</p>
 
 </div>
 </div>
@@ -731,7 +797,7 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <pre class="fragment">Return the name of the node. </pre> 
-<p class="definition">Definition at line <a class="el" href="node_8py_source.html#l00229">229</a> of file <a class="el" href="node_8py_source.html">node.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="node_8py_source.html#l00260">260</a> of file <a class="el" href="node_8py_source.html">node.py</a>.</p>
 
 </div>
 </div>
@@ -751,7 +817,7 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <pre class="fragment">Print the graph of nodes </pre> 
-<p class="definition">Definition at line <a class="el" href="node_8py_source.html#l00243">243</a> of file <a class="el" href="node_8py_source.html">node.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="node_8py_source.html#l00274">274</a> of file <a class="el" href="node_8py_source.html">node.py</a>.</p>
 
 </div>
 </div>
@@ -771,7 +837,7 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <pre class="fragment">Return whether the node requires gradient. </pre> 
-<p class="definition">Definition at line <a class="el" href="node_8py_source.html#l00234">234</a> of file <a class="el" href="node_8py_source.html">node.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="node_8py_source.html#l00265">265</a> of file <a class="el" href="node_8py_source.html">node.py</a>.</p>
 
 </div>
 </div>
@@ -813,7 +879,7 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <pre class="fragment">Return the value of the node. </pre> 
-<p class="definition">Definition at line <a class="el" href="node_8py_source.html#l00224">224</a> of file <a class="el" href="node_8py_source.html">node.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="node_8py_source.html#l00255">255</a> of file <a class="el" href="node_8py_source.html">node.py</a>.</p>
 
 </div>
 </div>
@@ -833,7 +899,7 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <pre class="fragment">Reset the gradient to zero. </pre> 
-<p class="definition">Definition at line <a class="el" href="node_8py_source.html#l00212">212</a> of file <a class="el" href="node_8py_source.html">node.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="node_8py_source.html#l00243">243</a> of file <a class="el" href="node_8py_source.html">node.py</a>.</p>
 
 </div>
 </div>

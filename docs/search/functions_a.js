@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['parameters_173',['parameters',['../classmutorch_1_1core_1_1module_1_1Module.html#ae02070ab659eb4cd58ce740ec1cddd81',1,'mutorch::core::module::Module']]],
-  ['print_5fgraph_174',['print_graph',['../classmutorch_1_1core_1_1node_1_1Node.html#a76ff5430b41588b1e6a8ba1c5900c35a',1,'mutorch::core::node::Node']]]
+  ['name_191',['name',['../classmutorch_1_1core_1_1node_1_1Node.html#adfafa09161b1776f025241ae5c69f72f',1,'mutorch::core::node::Node']]],
+  ['num_5fparameters_192',['num_parameters',['../classmutorch_1_1core_1_1module_1_1Module.html#a18f6f9109539c488498509d1836af0a5',1,'mutorch::core::module::Module']]]
 ];

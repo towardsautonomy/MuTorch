@@ -7,18 +7,16 @@ from relu import ReLU
 class Neuron(Module):
     def __init__(self, input_size,
                        weight_initializer=lambda: random.uniform(-1, 1),
-                       bias_initializer=lambda: random.uniform(-1, 1),
-                       activation=ReLU()):
+                       bias_initializer=lambda: random.uniform(-1, 1)
+                ):
         """  A single neuron
         :param input_size: the number of inputs
         :param weight_initializer: a function that returns a random weight
         :param bias_initializer: a function that returns a random bias
-        :param activation: the activation function
         """
         super().__init__()
         self.weights = Tensor([weight_initializer() for _ in range(input_size)], requires_grad=True)
         self.bias = Tensor(bias_initializer(), requires_grad=True)
-        self.activation = activation
         # internal parameters
         self._parameters = self.weights.data[0] + self.bias.data[0]
 
@@ -27,9 +25,8 @@ class Neuron(Module):
         :param inputs: the inputs to the neuron
         :return: the output of the neuron
         """
-        inputs = Tensor(inputs) if not isinstance(inputs, (Tensor, core.tensor.Tensor)) else inputs
+        inputs = Tensor(inputs) if not 'Tensor' in str(type(inputs)) else inputs
         out = (inputs * self.weights).sum() + self.bias
-        out = self.activation(out) if self.activation else out
         # get the output value node
         return out.data[0][0] if isinstance(out, (Tensor, core.tensor.Tensor)) else out
 
@@ -57,8 +54,7 @@ class Linear(Module):
         self.activation = activation
         self.neurons = [Neuron(input_size, 
                                weight_initializer, 
-                               bias_initializer, 
-                               activation) for _ in range(output_size)]
+                               bias_initializer) for _ in range(output_size)]
         # internal parameters
         self._parameters = [p for n in self.neurons for p in n.parameters()]
         self._children_layers = children_layers
@@ -68,16 +64,17 @@ class Linear(Module):
         :param inputs: the inputs to the linear layer
         :return: the output of the linear layer
         """
-        inputs = Tensor(inputs) if not isinstance(inputs, (Tensor, core.tensor.Tensor)) else inputs
+        inputs = Tensor(inputs) if not 'Tensor' in str(type(inputs)) else inputs
         batch_size = inputs.shape[0]
         if inputs.shape[1] != self.input_size:
             raise ValueError(f"Input size must be {self.input_size} but got {inputs.shape[1]}")
         if batch_size != 1:
-            out = [[n.forward(inputs.data[i]) for n in self.neurons] for i in range(batch_size)]
+            out = Tensor([[n.forward(inputs.data[i]) for n in self.neurons] for i in range(batch_size)])
         else:
-            out = [n.forward(inputs) for n in self.neurons]
+            out = Tensor([n.forward(inputs) for n in self.neurons])
+        out = self.activation(out) if self.activation else out
 
-        return Tensor(out)
+        return out
 
     def __repr__(self):
         layer_str = f"Linear(input_size={self.input_size}, output_size={self.output_size}"

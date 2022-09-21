@@ -12,6 +12,8 @@ Some of the nomenclature used in this framework is inspired by PyTorch and are d
 
 The framework is built in a modular way, and can be extended to include new layers, activation functions, and optimizers. Examples of how to use the framework to build *node-level*, *tensor-level*, or a full fledged *Sequential MLP* are provided in the [Demo Notebook]([demo.ipynb](https://github.com/towardsautonomy/mutorch/blob/main/demo.ipynb)) notebook. *Loss functions* and *optimizer implementations* are also provided to build an end-to-end understanding of neural network training process. The framework also provides a simple way to visualize the computational graph using [Graphviz](https://graphviz.org/).
 
+![](media/decision_boundaries.png)
+
 ## Building a Neural Network
 
 The framework can be used in a few ways:
@@ -154,4 +156,6 @@ Model output after training:  [0.012926827557352217, 0.008991985611204682, 0.002
 
 Model weights can further be saved and loaded using `model.save(filename)` and `model.load(filename)` respectively.
 
-**For a better understanding of the framework, please see the [Demo Notebook](https://github.com/towardsautonomy/mutorch/blob/main/demo.ipynb).**
+This was just a toy example, but it can easily be extended to a more realistic problem such as classification. One can also further dissect the model to visualize the decision boundary as shown in the figure above. 
+
+**For a better understanding of the framework, examples on how to train models for realistic problems, please see the [Demo Notebook](https://github.com/towardsautonomy/mutorch/blob/main/demo.ipynb).**

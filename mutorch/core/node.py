@@ -183,6 +183,37 @@ class Node:
 
         return out
 
+    def log(self):
+        """ Compute the natural logarithm of a node. 
+        :return: the natural logarithm of the node
+        """
+        self = self.clip(min_value=1e-8)
+        out = Node(math.log(self.value), 
+                children_nodes=(self,), 
+                op='log')
+        
+        def backward():
+            self._grad += 1 / self.value * out._grad
+        out._backward = backward
+
+        return out
+
+    def clip(self, min_value=None, max_value=None):
+        """ Clip the value of a node. 
+        :param min_value: the minimum value
+        :param max_value: the maximum value
+        :return: the clipped node
+        """
+        if min_value is None and max_value is None:
+            raise ValueError('At least one of the arguments min_value and max_value must be specified.')
+        if min_value is not None and max_value is not None:
+            assert min_value < max_value, 'The minimum value must be smaller than the maximum value.'
+        if min_value is not None and self.value < min_value:
+            self = (self / self) * Node(min_value)
+        elif max_value is not None and self.value > max_value:
+            self = (self / self) * Node(max_value)
+        return self
+
     def _build_node_graph(self):
         """ Build a graph of nodes. 
         :return: the graph of nodes
