@@ -1,5 +1,4 @@
 import math
-import core
 from node import Node
 from tensor import Tensor
 
@@ -30,7 +29,7 @@ class Sigmoid(Node):
         :param x: The input node.
         :return: The output node.
         """
-        x = x if isinstance(x, (Node, core.node.Node, Tensor, core.tensor.Tensor)) \
+        x = x if 'Node' in str(type(x)) or 'Tensor' in str(type(x)) \
               else Node(x) if isinstance(x, (int, float)) else Tensor(x)
 
         if 'Tensor' in str(type(x)):

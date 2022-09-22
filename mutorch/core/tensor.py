@@ -1,4 +1,3 @@
-import core
 from node import Node
 
 class Tensor:
@@ -29,9 +28,9 @@ class Tensor:
             self._convert_to_tensor(data, requires_grad, convert_to_node=False)
 
         ## check if data is a list of tensors
-        elif isinstance(data, list) and isinstance(data[0], (Tensor, core.tensor.Tensor)) or \
-                isinstance(data, list) and isinstance(data[0], list) and isinstance(data[0][0], (Tensor, core.tensor.Tensor)) or \
-                isinstance(data, list) and isinstance(data[0], list) and isinstance(data[0][0], list) and isinstance(data[0][0][0], (Tensor, core.tensor.Tensor)):
+        elif isinstance(data, list) and 'Tensor' in str(type(data[0])) or \
+                isinstance(data, list) and isinstance(data[0], list) and 'Tensor' in str(type(data[0][0])) or \
+                isinstance(data, list) and isinstance(data[0], list) and isinstance(data[0][0], list) and 'Tensor' in str(type(data[0][0][0])):
             self._shape = (len(data), len(data[0]._data))
             self._data = [row._data for row in data]
         else:

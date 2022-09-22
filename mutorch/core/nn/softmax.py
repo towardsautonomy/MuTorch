@@ -1,5 +1,4 @@
 import math
-import core
 from node import Node
 from tensor import Tensor
 

@@ -1,5 +1,4 @@
 import random
-import core
 from module import Module
 from tensor import Tensor
 from relu import ReLU
@@ -28,7 +27,7 @@ class Neuron(Module):
         inputs = Tensor(inputs) if not 'Tensor' in str(type(inputs)) else inputs
         out = (inputs * self.weights).sum() + self.bias
         # get the output value node
-        return out.data[0][0] if isinstance(out, (Tensor, core.tensor.Tensor)) else out
+        return out.data[0][0] if 'Tensor' in str(type(out)) else out
 
     def __repr__(self):
         return f"Neuron(input_size={len(self.weights)})"
