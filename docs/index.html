@@ -87,7 +87,7 @@ $(document).ready(function(){initNavTree('index.html',''); initResizable(); });
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p><a href="https://github.com/towardsautonomy/mutorch"><b>GitHub</b></a></p>
-<p>MuTorch is a deep learning framework built for educational purposes and building a deep understanding of how neural networks work. This is not intended to be efficient, but rather very simplistic. The goal is to build a framework that is easy to understand, modify, and learn from. <b>It does not use any external libraries, and is built from scratch using only Python lists and operators</b>.</p>
+<p>MuTorch is a deep learning framework built for educational purposes and to build a deep understanding of how neural networks work. This is not intended to be efficient, but rather very simplistic. The goal is to create a framework that is easy to understand, modify, and learn from. <b>It does not use external libraries and is built from scratch using only Python lists and operators</b>.</p>
 <p>Some of the nomenclature used in this framework is inspired by PyTorch and are defined below:</p>
 <ul>
 <li><b>Node</b>: A node is the most basic unit of the computational graph and represents either a value or an operation. <br  />
@@ -99,8 +99,11 @@ $(document).ready(function(){initNavTree('index.html',''); initResizable(); });
 <li><b>Layer</b>: A layer performs computations on a tensor and returns a tensor. <br  />
 </li>
 </ul>
-<p>The framework is built in a modular way, and can be extended to include new layers, activation functions, and optimizers. Examples of how to use the framework to build <em>node-level</em>, <em>tensor-level</em>, or a full fledged <em>Sequential MLP</em> are provided in the <a href="[demo.ipynb](https://github.com/towardsautonomy/mutorch/blob/main/demo.ipynb)">Demo Notebook</a> notebook. <em>Loss functions</em> and <em>optimizer implementations</em> are also provided to build an end-to-end understanding of neural network training process. The framework also provides a simple way to visualize the computational graph using <a href="https://graphviz.org/">Graphviz</a>.</p>
-<h1><a class="anchor" id="autotoc_md1"></a>
+<p>The framework is built in a modular way, and can be extended to include new layers, activation functions, and optimizers. Examples of how to use the framework to build <em>node-level</em>, <em>tensor-level</em>, or a full fledged <em>Sequential MLP</em> are provided in the <a href="https://github.com/towardsautonomy/mutorch/blob/main/demo.ipynb">Demo Notebook</a>. <em>Loss functions</em> and <em>optimizer implementations</em> are also provided to build an end-to-end understanding of neural network training process. The framework also provides a simple way to visualize the computational graph using <a href="https://graphviz.org/">Graphviz</a>.</p>
+<div class="image">
+<img src="decision_boundaries.png" alt=""/>
+</div>
+   <h1><a class="anchor" id="autotoc_md1"></a>
 Building a Neural Network</h1>
 <p>The framework can be used in a few ways:</p>
 <h2><a class="anchor" id="autotoc_md2"></a>
@@ -222,7 +225,8 @@ Training a Neural Network</h1>
 <div class="line">#################### Training complete!</div>
 <div class="line">Model output after training:  [0.012926827557352217, 0.008991985611204682, 0.0027829626242188233, 0.9912839449884999, 0.9925483053096971, 0.9921878687511471]</div>
 </div><!-- fragment --><p>Model weights can further be saved and loaded using <code>model.save(filename)</code> and <code>model.load(filename)</code> respectively.</p>
-<p><b>For a better understanding of the framework, please see the <a href="https://github.com/towardsautonomy/mutorch/blob/main/demo.ipynb">Demo Notebook</a>.</b> </p>
+<p>This was just a toy example, but it can easily be extended to a more realistic problem such as classification. One can also further dissect the model to visualize the decision boundary as shown in the figure above.&#160;</p>
+<p><b>For a better understanding of the framework, examples on how to train models for realistic problems, please see the <a href="https://github.com/towardsautonomy/mutorch/blob/main/demo.ipynb">Demo Notebook</a>.</b> </p>
 </div></div><!-- PageDoc -->
 </div><!-- contents -->
 </div><!-- doc-content -->
